@@ -1,58 +1,32 @@
-PImage wowImage1;
-PImage wowImage2;
-PImage wowImage3;
+PImage image1; //initalize 
 
 void setup() {
-  size(750, 750);
-
-  wowImage1 = loadImage("wow1.jpeg");
-  wowImage2 = loadImage("wow2.jpeg");
-  wowImage3 = loadImage("wow3.jpeg");
-
-
-  stroke(#FFFFFF);
-  strokeWeight(100);
-  rectMode(CENTER);
+  size(600, 600);
+  image1 = loadImage("meme.jpeg"); //load image 
 }
 
-
 void draw() {
-  background(#a594dd);
-  //draw the image 1st image
+  //load image into canvas & resize & reposition
+  image(image1, width*0.00, height*0.00); //use image, place at 0,0 positon
+  image1.resize(width,height); //resize the image to fit any canvas size
 
 
+  //create text
+ //store string in a variable to easily reuse
+ var quote = "Matthew";
+ var quote2 = "let me do it for you";
+ 
+  text(quote, 315, 100); //set position of text
+  fill(84, 22, 112, 816); //color text
+  textSize(60); 
+  textAlign(CENTER,TOP);
+  
+  text(quote2, 317, 527); //set position of text
+  fill(84, 22, 112, 816); //color text
+  textSize(50); 
+  textAlign(CENTER,BOTTOM);
 
-
-
-
-  translate(50, 95); //parent translate moves all 3 images
-  scale(0.2);
-  rect(1686, 285, 1745, 3051);
-  stroke(204, 102, 0);
-  image(wowImage1, -1, -442);
-
-
-
-  scale(1);  //2nd image
-  translate(252, 123);// moves  2nd image and 3rd
-  image(wowImage2, -234, 1598);
-
-  scale(0.5);
-  translate(229, 101); //moves 3rd image
-  image(wowImage3, 923, 1649); //x,y position to move image
-
-  //Create border for  images
-  textSize(409);
-  text("Kevin's World Of Warcraft Gameplay", -131, 3439);
-  fill(243, 13, 13);
-
-
-  translate(-977, -618);
-
-  translate(100, 0);
-  line(121, 3083, 100, -605);
-  stroke(30);
-  //how to define the square to match the image border without using tweak?
+  
 }
 
 void mouseClicked() {
