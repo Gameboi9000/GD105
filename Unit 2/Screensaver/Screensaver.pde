@@ -2,8 +2,7 @@ PVector moonPosition, sunPosition, planetsPosition;//initalize variables
 int sunSize = 100;
 int earthSize = 50; //set the diamater of the sun, used in draw
 int moonSize = 25; //set the diamater of the sun, used in draw
-int planetSize = 0;
-
+int planetSize = 0; //modify each planet to there different size
 float speedOfRotation = 0.01; //rate of speed of rotation
 
 void setup() {
@@ -72,21 +71,9 @@ void draw() {
   //Pluto
   fill(#0876ff);
   circle(planetsPosition.x + 414, planetsPosition.y + -100, planetSize + 20);
+}
 
-
-  //expand sun outwards into the screen
-  //need to stop at a certain point height & width of screen
-
-
-
-  //Rotate Earth around the sun
-
-
-  //line(A.x + 1, A.y + 5, B.x, B.y);
-
-  //line(A.x,A.y,B.x,B.y);
-  //A.x += random(-movingLines, movingLines);
-  //A.y += random(-movingLines, movingLines);
-  //B.x += random(-movingLines, movingLines);
-  //B.y += random(-movingLines, movingLines);
+void mouseClicked() {
+  save("output.png");
+  println(frameCount + ":saved as output.png");
 }
