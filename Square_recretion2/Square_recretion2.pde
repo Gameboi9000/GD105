@@ -6,7 +6,7 @@ void setup () {
 void draw() {
   int ppi =  width /10;
 
-
+  noStroke();
 
   //1000 px = 10 in canvas
   //100 px = 1 inch width
@@ -30,7 +30,7 @@ void draw() {
   fill(#b4bcb1);
   square(square4.x, square4.y, 4 * ppi);
 
-  noStroke();
+
   
   if(frameCount == 1) {
     String filename = "output";
