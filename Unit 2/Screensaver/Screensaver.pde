@@ -2,78 +2,143 @@ PVector moonPosition, sunPosition, planetsPosition;//initalize variables
 int sunSize = 100;
 int earthSize = 50; //set the diamater of the sun, used in draw
 int moonSize = 25; //set the diamater of the sun, used in draw
-int planetSize = 0; //modify each planet to there different size
-float speedOfRotation = 0.01; //rate of speed of rotation
+int planetSize = 0;
+
+float speedOfRotation = 0.00; //rate of speed of rotation
+
+
 
 void setup() {
-  fullScreen();
-  //size(750,750);
+  //fullScreen();
+  size(1000, 1000);
   sunPosition = new PVector(0, 0); //set the sun in the center of the canvas
   moonPosition = new PVector(150, 130);
   planetsPosition = new PVector(0, 0);
 
-
-
-
-  //frameRate(1); //
+  frameRate(3); //
 }
 
 void draw() {
   background(0); //black universe
-  speedOfRotation += -0.001; //slow position
+  speedOfRotation += 0.001; //slow position
 
-  //SUN fixed point 
+  //SUN fixed point
   translate(width/2, height/2); //translate to the center of canvas
   fill(#ffd908);
-  circle(sunPosition.x + 0, sunPosition.y + 0, sunSize + -15); //draw the sun on the canvas x,y, size
-  sunPosition.x += 0; 
+  circle(sunPosition.x + 6, sunPosition.y + 12, sunSize + 51); //draw the sun on the canvas x,y, size
+  sunPosition.x += 0;
 
 
   rotate(TAU * speedOfRotation); //moves all the circles to rotate
   //Mercury
-  fill(#1a1a1a);
-  circle(planetsPosition.x + 58, planetsPosition.y + 30, planetSize + 20);
-  
+  fill(#2c2b2b);
+  circle(planetsPosition.x + 99, planetsPosition.y + -31, planetSize + 30);
+
   //Venus
   fill(#e6e6e6);
-  circle(planetsPosition.x + 99, planetsPosition.y + -59, planetSize + 23);
+  circle(planetsPosition.x + 155, planetsPosition.y + 20, planetSize + 31);
 
   //EARTH
   fill(#2f6a69);
-  circle(planetsPosition.x + 140, planetsPosition.y + -50, planetSize + 20);
+  circle(planetsPosition.x + 201, planetsPosition.y + 60, planetSize + 44);
   //moon
   fill(#6d7380);
-  circle(moonPosition.x + -24, moonPosition.y + -195, moonSize + -17);
+  circle(moonPosition.x + 63, moonPosition.y + -102, moonSize + -17);
   moonPosition.y += 0; //0 does not move -1 goes up
   //Mars
   fill(#993d00);
-  circle(planetsPosition.x + 135, planetsPosition.y + -95, planetSize + 26);
-  
+  circle(planetsPosition.x + -132, planetsPosition.y + -128, planetSize + 29);
+
   //Jupiter
   fill(#b07f35);
-  circle(planetsPosition.x + 209, planetsPosition.y + -85, planetSize + 49);
-  
-  //saturn
-  
-  fill(#b08f36);
-  circle(planetsPosition.x + 282, planetsPosition.y + -34, planetSize + 34);
-  
-  //uranus
-  
-  fill(#5580aa);
-  circle(planetsPosition.x + 338, planetsPosition.y + 14, planetSize + 32);
-  
-  //Neptune
-     
-  fill(#366896);
-  circle(planetsPosition.x + 378, planetsPosition.y + 138, planetSize + 20);
-  
-  //Pluto
-  fill(#0876ff);
-  circle(planetsPosition.x + 414, planetsPosition.y + -100, planetSize + 20);
-}
+  circle(planetsPosition.x + 186, planetsPosition.y + -168, planetSize + 52);
 
-void mouseClicked() {
-  save("output.png");
-  println(frameCount + ":saved as output.png");
+  //saturn
+
+  fill(#b08f36);
+  circle(planetsPosition.x + 263, planetsPosition.y + -14, planetSize + 34);
+
+  //uranus
+
+  fill(#5580aa);
+  circle(planetsPosition.x + 399, planetsPosition.y + 118, planetSize + 37);
+
+  //Neptune
+
+  fill(#366896);
+  circle(planetsPosition.x + -424, planetsPosition.y + 122, planetSize + 50);
+
+  //Pluto
+  fill(#948b8b);
+  circle(planetsPosition.x + -468, planetsPosition.y + -157, planetSize + 16);
+
+
+  int ppi = 100;
+
+
+  PVector circle1 = new PVector(0 * ppi, 0 * ppi);
+  noFill();
+  circle(circle1.x, circle1.y, 10 * ppi);
+  stroke(50);
+
+  PVector circle2 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle2.x, circle2.y, 9 * ppi);
+
+
+  PVector circle3 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle3.x, circle3.y, 8 * ppi);
+
+
+
+  PVector circle4 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle4.x, circle4.y, 7 * ppi);
+
+
+  PVector circle5 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle5.x, circle5.y, 6 * ppi);
+
+  PVector circle6 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle6.x, circle6.y, 5 * ppi);
+
+  PVector circle7 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle7.x, circle7.y, 4 * ppi);
+  
+  PVector circle8 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle8.x, circle8.y, 3 * ppi);
+  
+  PVector circle9 = new PVector(0.10 * ppi, 0.10 * ppi);
+  noFill();
+  circle(circle9.x, circle9.y, 2 * ppi);
+  
+
+
+
+  if (frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }
+
+
+  //fill(#ffd908);
+  //translate(-224,-291);
+  //beginShape();
+  //vertex(0, -50);
+  //    vertex(14, -20);
+  //    vertex(47, -15);
+  //    vertex(23, 7);
+  //    vertex(29, 40);
+  //    vertex(0, 25);
+  //    vertex(-29, 40);
+  //    vertex(-23, 7);
+  //    vertex(-47, -15);
+  //    vertex(-14, -20);
+  //    endShape(CLOSE);
 }
