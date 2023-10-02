@@ -1,4 +1,4 @@
-PVector moonPosition, sunPosition, planetsPosition;//initalize variables
+PVector moonPosition, sunPosition, planetsPosition, stars;//initalize variables
 int sunSize = 100;
 int earthSize = 50; //set the diamater of the sun, used in draw
 int moonSize = 25; //set the diamater of the sun, used in draw
@@ -9,18 +9,18 @@ float speedOfRotation = 0.00; //rate of speed of rotation
 
 
 void setup() {
-  //fullScreen();
-  size(1000, 1000);
+  fullScreen();
+  //size(1000, 1000);
   sunPosition = new PVector(0, 0); //set the sun in the center of the canvas
   moonPosition = new PVector(150, 130);
   planetsPosition = new PVector(0, 0);
 
-  frameRate(3); //
+  //frameRate(3);
 }
 
 void draw() {
   background(0); //black universe
-  speedOfRotation += 0.001; //slow position
+  speedOfRotation += 0.002; //slow position
 
   //SUN fixed point
   translate(width/2, height/2); //translate to the center of canvas
@@ -29,7 +29,7 @@ void draw() {
   sunPosition.x += 0;
 
 
-  rotate(TAU * speedOfRotation); //moves all the circles to rotate
+  rotate(TAU + 1.25 * speedOfRotation); //moves all the circles to rotate
   //Mercury
   fill(#2c2b2b);
   circle(planetsPosition.x + 99, planetsPosition.y + -31, planetSize + 30);
@@ -51,6 +51,7 @@ void draw() {
 
   //Jupiter
   fill(#b07f35);
+  
   circle(planetsPosition.x + 186, planetsPosition.y + -168, planetSize + 52);
 
   //saturn
@@ -73,6 +74,9 @@ void draw() {
   circle(planetsPosition.x + -468, planetsPosition.y + -157, planetSize + 16);
 
 
+
+
+  //draw circle of orbit
   int ppi = 100;
 
 
@@ -108,15 +112,27 @@ void draw() {
   PVector circle7 = new PVector(0.10 * ppi, 0.10 * ppi);
   noFill();
   circle(circle7.x, circle7.y, 4 * ppi);
-  
+
   PVector circle8 = new PVector(0.10 * ppi, 0.10 * ppi);
   noFill();
   circle(circle8.x, circle8.y, 3 * ppi);
-  
-  PVector circle9 = new PVector(0.10 * ppi, 0.10 * ppi);
-  noFill();
-  circle(circle9.x, circle9.y, 2 * ppi);
-  
+
+  //PVector circle9 = new PVector(0.10 * ppi, 0.10 * ppi);
+  //noFill();
+  //circle(circle9.x, circle9.y, 2 * ppi);
+
+
+  //stars using dots
+  fill(#e4c915);
+  int starLocationX = -99;
+  int starLocationY = 209;
+  circle(starLocationX * 2, -starLocationY * 2, 3);
+  circle(starLocationX * 2, -starLocationY * 2, 3);
+  circle(starLocationX * 3, -starLocationY, 3);
+  circle(starLocationX * 2, -starLocationY, 3);
+  circle(starLocationX * 2, starLocationY, 3);
+  circle(starLocationX * 2, starLocationY, 3);
+  circle(starLocationX * 3, starLocationY, 3);
 
 
 
@@ -125,20 +141,4 @@ void draw() {
     save(filename + ".png");
     print("canvas saved as " + filename + ".png");
   }
-
-
-  //fill(#ffd908);
-  //translate(-224,-291);
-  //beginShape();
-  //vertex(0, -50);
-  //    vertex(14, -20);
-  //    vertex(47, -15);
-  //    vertex(23, 7);
-  //    vertex(29, 40);
-  //    vertex(0, 25);
-  //    vertex(-29, 40);
-  //    vertex(-23, 7);
-  //    vertex(-47, -15);
-  //    vertex(-14, -20);
-  //    endShape(CLOSE);
 }
