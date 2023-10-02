@@ -1,6 +1,8 @@
 void setup() {
   size(500, 500); 
   rectMode(CENTER);  //black rect
+  
+  ////https://sasj.tumblr.com/post/726927275847827456/geometric-shapes-230828
 }
 
 
