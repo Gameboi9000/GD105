@@ -1,7 +1,5 @@
-//draw shapes
-//animate them doing different things
+//Gif moving 
 
-//initalize variables
 PVector topLeft, topCenter, topRight,
   midLeft, midCenter, midRight,
   botLeft, botCenter, botRight;
@@ -48,11 +46,11 @@ void draw() {
   circle(abs(cos(progress * TAU)) * 20, sin(progress*TAU)*19, 9);
   resetMatrix();
 
-  fill(#f5cb09);
+  fill(#facb0f);
   translate(topCenter.x, topCenter.y);
-  circle(cos(progress * TAU) * 35, sin(progress*TAU)*3, 8);
+  circle(cos(progress * TAU) * 35, sin(progress*TAU)*3, 73);
   rotate(progress * TAU / 6.4);
-  square(0,0, 59 + sin(progress * TAU) *9);
+  square(-27,29, 89 + sin(progress * TAU) *4);
   
   
   line(sin(progress * TAU) *23, -9, sin(progress * TAU) * 38, 23);
@@ -79,26 +77,24 @@ void draw() {
 
   fill(#7eff3e);
   translate(midRight.x, midRight.y);
-  circle(cos(progress * TAU) * 24, sin(progress*TAU)*-1, 25);
+  circle(cos(progress * TAU) * 13, sin(progress*TAU)*-1, 25);
   resetMatrix();
 
 
   //bottom
   fill(#f67b03);
   translate(botLeft.x, botLeft.y);
-  circle(36, sin(progress*TAU)*6, 26);
+  circle(36, sin(progress*TAU)*26, 26);
   //triangle( cos(TAU * 1.4 / 3.0 - TAU/ 3.7) * 15, sin(TAU * 1.6 / 2.3 - TAU / 11.7) *25,
   //          cos(TAU * 3.1 / 3.0 - TAU/ 4.4) * 15, sin(TAU * 1.0 / 3.0 - TAU / 8.1) *24,
   //          cos(TAU * 2.3 / 3.0 - TAU/ 3.9) * 15, sin(TAU * 2.0 / 3.0 - TAU / 5.3) *37);
   resetMatrix();
 
 
-  fill(#030303);
+  fill(#9d8e8e);
   translate(botCenter.x, botCenter.y);
-  circle(cos(progress * TAU) * 50, sin(progress*TAU)*25, 64);
+  circle(cos(progress * TAU) * 7, sin(progress*TAU)*21, 50);
   resetMatrix();
-
-
 
 
   fill(#0d362a);

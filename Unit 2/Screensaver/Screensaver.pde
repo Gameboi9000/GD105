@@ -3,7 +3,8 @@ int sunSize = 100;
 int earthSize = 50; //set the diamater of the sun, used in draw
 int moonSize = 25; //set the diamater of the sun, used in draw
 int planetSize = 0;
-
+int starLocationX = -99;
+int starLocationY = 209;
 float speedOfRotation = 0.00; //rate of speed of rotation
 
 
@@ -51,7 +52,7 @@ void draw() {
 
   //Jupiter
   fill(#b07f35);
-  
+
   circle(planetsPosition.x + 186, planetsPosition.y + -168, planetSize + 52);
 
   //saturn
@@ -124,8 +125,9 @@ void draw() {
 
   //stars using dots
   fill(#e4c915);
-  int starLocationX = -99;
-  int starLocationY = 209;
+
+
+
   circle(starLocationX * 2, -starLocationY * 2, 3);
   circle(starLocationX * 2, -starLocationY * 2, 3);
   circle(starLocationX * 3, -starLocationY, 3);

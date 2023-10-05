@@ -14,17 +14,6 @@ int frames = 100;
 void setup() {
   size(500, 500);
   noSmooth();
-
-  
-  
-  rectMode(CENTER);
-}
-
-
-
-
-void draw() {
-  //draw PVectors position
   topLeft   = new PVector( width * 0.27, height * 0.34);
   topCenter = new PVector( width * 0.47, height * 0.14);
   topRight  = new PVector( width * 0.83, height * 0.54);
@@ -36,6 +25,17 @@ void draw() {
   botLeft   = new PVector( width * 0.04, height * 0.57);
   botRight  = new PVector( width * 0.55, height * 0.75);
   botCenter = new PVector( width * 0.70, height * 0.75);
+
+
+  rectMode(CENTER);
+}
+
+
+
+
+void draw() {
+  //draw PVectors position
+
   //top
   //background(5);
   //draw objects on canvas
@@ -52,9 +52,9 @@ void draw() {
   translate(topCenter.x, topCenter.y);
   circle(cos(progress * TAU) * 35, sin(progress*TAU)*3, 8);
   rotate(progress * TAU / 6.4);
-  square(0,0, 59 + sin(progress * TAU) *9);
-  
-  
+  square(0, 0, 59 + sin(progress * TAU) *9);
+
+
   line(sin(progress * TAU) *23, -9, sin(progress * TAU) * 38, 23);
   resetMatrix();
 
