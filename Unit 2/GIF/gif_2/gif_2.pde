@@ -1,27 +1,19 @@
-//make something thats moving..
+//make a ring that expands out and in 
 float progress = 0;
 float progressStep = 0.1;
 float progress1 = 0;
 
 void setup() {
-  size(500, 500);
-  //fullScreen();
+  //size(500, 500);
+  fullScreen();
 }
 
 
 void draw() {
   background(0);
+  progress = sin(frameCount * .007) * width/ 2; // moves the circle to half of the width
 
-  // call the variable with
-
-  //circle animation
-  progress += progressStep + 1.9;
-
-
-  line(progress + -363, progress + -116, progress + -188, -progress + -62);
-  line(progress + -339, progress + -98, progress + -188, -progress + -30);
-  line(progress + -339, progress + -38, progress + -188, -progress + -40);
-
+//circles positioned within each other 
   translate(width /2 -253, height /2  - 252);
   noFill();
   fill(#090202);
@@ -46,27 +38,17 @@ void draw() {
   fill(#0f0e0e);
   circle(237, 249, -218 + progress);
   noFill();
-  circle(237, 249, -218 + progress + 78);
-  circle(237, 249, -218 + progress + 121);
-  circle(237, 249, -218 + progress + 93);
-  circle(237, 249, -218 + progress + 138);
-  circle(237, 249, -218 + progress + 107);
-  circle(237, 249, -218 + progress + 27);
-
-  //stroke(0,0,0,0);
-  square(progress, progress, -progress);
-  square(progress, progress, -progress + 6);
+  circle(237, 249, -218 + progress + 215);
+  circle(237, 249, -218 + progress + 262);
+  circle(237, 249, -218 + progress + 122);
+  circle(237, 249, -218 + progress + 242);
+  circle(237, 249, -218 + progress + 150);
+  circle(237, 249, -218 + progress + 364);
 
 
   stroke(255);
-  strokeWeight(1);
+  strokeWeight(3);
   noFill();
 
 
-  if ( progress >= width ) {
-    progress = -1;
-  }
-
-  progress --;
-  //strokeWeight(50);
 }
