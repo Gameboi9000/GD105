@@ -1,41 +1,44 @@
 void setup() {
-  //size(500,500);
-  //fullScreen();
+  //fullScreen(); //looks different on fullscreen but its cool
   size(500, 500);
 }
 
 void draw() {
-
+  smooth();
   //outer ring
   background(14);
   translate(width/2, height/2);
-  for (float y = 0; y <= 71; y+= 1) {
+  for (float y = 0; y <= 226; y+= 1) {
     rotate(1);
     strokeWeight(2);
-    stroke(#8249f6);
+    stroke(#44056c);
     rotate(cos(frameCount * .001) * .001);
-    line(207, 10, 336, 103);
-    stroke(#1f1d1c);
+    line(width/2, 10, 336, 103);
+    stroke(#48186a);
     strokeWeight(2);
-    line(37, 44, 160, 104);
+    line(width / 1, 44, 160, sin(308) + -157);
   }
 
+  //mid
   translate(-3, 0);
   circle(0, 0, 374);
   noFill();
   for (float x = 0; x <= 49; x+= 1) {
     rotate(1);
     strokeWeight(1);
-    stroke(#de6a6a);
-    rotate(cos(frameCount * .001) * 0.8);
-    line(-103, 174, 29, 156);
+    stroke(#b570c9);
+    rotate(cos(frameCount * .001) * -0.4);
+    line(-202, 143, 196, cos(-1) + 45);
   }
 
-  translate(2, -8);
-  for (float x = 0; x <= 20; x+= 2) {
-    rotate(21);
+
+  //inner background lines
+  translate(-16, -22);
+  for (float x = 0; x <= 58; x+= 3) {
+    rotate(1);
     strokeWeight(1);
-    stroke(#fb6d18);
-    line(64, 125, 1, 1);
+    stroke(#a603db);
+    rotate(cos(frameCount * .001) * 1.3);
+    line(sin(5) + 16, 52, 14, 49);
   }
 }
