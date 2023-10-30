@@ -1,14 +1,17 @@
 //the 2n composition piece
-boolean frontSide, backSide;
+boolean frontSide, backSide, side;
 void setup() {
 
   size(500, 500);
-  
+
   frontSide = random(1) < 0.95; //first coin
   frontSide = true;
-  
-  backSide = random(1) < 0.50; 
-  backSide = false;
+
+  backSide = random(1) < 1; //2nd coin
+  backSide = true;
+
+  side = random(1) < 1; //3rd 2^3 
+  side = false;
 
 
   if (frontSide) {
@@ -19,15 +22,14 @@ void setup() {
     stroke(#740303);
     //background(#240509);
   } else {
-    
-   strokeWeight(11);
-  stroke(#eb1230);
-  noFill();
-  ellipse(240,270,-183,286);
-  stroke(#f20606);
-  ellipse(240,269,261,370);
-  //background(#080808);
 
+    strokeWeight(11);
+    stroke(#eb1230);
+    noFill();
+    ellipse(240, 270, -183, 286);
+    stroke(#f20606);
+    ellipse(240, 269, 261, 370);
+    //background(#080808);
   }
 }
 
@@ -52,6 +54,20 @@ void draw() {
   }
 
 
+  if (side) {
+    //E
+    strokeWeight(11);
+    stroke(#eb1230);
+    line(471, 28, 240, 358);
+    line(4, 36, 240, 358);
+  } else {
+
+    strokeWeight(11);
+    stroke(#eb1230);
+    line(471, 28, 240, 358);
+    line(4, 36, 240, 358);
+  }
+
   if (frameCount == 1) {
 
     String name = "";
@@ -60,12 +76,20 @@ void draw() {
     } else {
       name += "0";
     }
-    
-    if(backSide) {
+
+    if (backSide) {
       name += "1";
     } else {
       name +="0";
     }
+
+    if (side) {
+      name+="2";
+    } else {
+      name+= "1";
+    }
+
+
 
     save(name + ".png");
     println("saved as " + name + ".png");
