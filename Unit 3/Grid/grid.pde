@@ -1,56 +1,40 @@
 //https://www.artsy.net/artwork/daniel-gottin-untitled-2-2001-abstract-painting
-
-
 void setup() {
-//fullScreen();
-size(500,500);
 
-
-//allocate
-
+  size(500, 500);
+  fullScreen();
 }
 
-
 void draw() {
+
+  background(#fade5b);
+  translate(width/4 , height/3);
+
+  strokeWeight(2);
+  fill(#feb300);
+  rect(-113, -123, 450, 228);
+  fill(#2f2a1f);
+  rect(-96, -106, 450, 279);
+  fill(#f6ae14);
+  rect(-96, -65, 462, 29);
+  fill(#463208);
+  rect(-96, -93, 427, 252);
+  fill(#9d0a0a);
+  strokeWeight(31);
+  rect(-96, -106, 394, 243);
+  fill(#7d7d7c);
+  rect(-123, 283, 495, 49);
+  fill(#3b3939);
+  rect(-122, 234, 495, 49);
+  fill(#630808);
+  rect(-122, 327, 495, 61);
+  fill(#ffef3d);
+  rect(-122, 183, 495, 46);
   
-background(#8e2216);
-translate(width/4, height/4);
-
-strokeWeight(7);
-line(715,652,890,802);
-fill(#feb300);
-rect(-113,-123,450,238);
-fill(#2f2a1f);
-rect(-96,-106,450,253);
-fill(#533b07);
-rect(-96,-65,462,234);
-fill(#463208);
-rect(-96,-93,427,255);
-fill(#412e06);
-strokeWeight(14);
-rect(-96,-106,394,243);
-fill(#7d7d7c);
-rect(-123,283,495,49);
-fill(#3b3939);
-rect(-122,234,495,49);
-fill(#630808);
-rect(-122,327,495,46);
-fill(#ffef3d);
-rect(-122,183,495,46);
-
-
-
-//for(int i =0; i < numCircles; i++) {
-//  sizes[i] = (int)random(215,-58);
-//  colors[i] = color(random(107), random(9), random(-3));
-//  circles[i] = new PVector( random(268), random(185));
-//}
-
-//for(int i=0; i < numCircles; i++) {
-//fill(colors[i]);
-//noStroke();
-//circle((circles[i].x),circles[i].y, sizes[i]);
-//}
-
-
+for(float i = 1 ; i < 3; i++) {
+fill(244);
+square(i + 58 ,i + -37,i + 92);
+triangle(i + 84,40,87,5,85,323);
+circle(3, 100,i + -8);
+}
 }
