@@ -2,7 +2,7 @@
 void setup() {
 
   size(500, 500);
-  fullScreen();
+  //fullScreen();
 }
 
 void draw() {
