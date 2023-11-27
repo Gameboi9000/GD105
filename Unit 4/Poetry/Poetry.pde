@@ -11,7 +11,7 @@ void setup() {
 
 void draw() {
   background(0);
-  
+ //making the rows of strings and positioning them in order 1-30 pvectors & strings 
   int padding = 100;
   v0 = new PVector(179,42);
   v1 = new PVector(46, 79);
@@ -44,6 +44,7 @@ void draw() {
   v28 = new PVector(171,486);
   v29 = new PVector(170, 500);
   v30 = new PVector(172,513);
+//responding to the piece in a form of K
 
   String title = "HITTING BOTTOM";
   String a = "Our love still young,                                               our marriage new,";
@@ -79,7 +80,7 @@ void draw() {
 
 
 
-
+//positioning the strings and printing the texts using pvectors x,y 
 
   textSize(16);
   fill(#00f8e9);
@@ -114,7 +115,8 @@ void draw() {
   text(bb, v28.x, v28.y);
   text(cc, v29.x, v29.y);
   text(dd, v30.x, v30.y);
-//text(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,y,z,aa,bb,cc,dd);
+
+//original piece is an X
 
 
   //Our love still young,                              our marriage new, a
