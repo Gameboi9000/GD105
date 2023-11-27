@@ -5,7 +5,7 @@ v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30;
 
 void setup() {
 
-  size(800, 800);
+  size(600, 600);
   //fullScreen();
 }
 
