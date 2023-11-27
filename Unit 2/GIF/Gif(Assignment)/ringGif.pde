@@ -50,5 +50,7 @@ void draw() {
   strokeWeight(3);
   noFill();
 
-
+  if(frameCount * progressStep * TAU <= TAU) {
+  saveFrame("frames/####.png");
+  }
 }
