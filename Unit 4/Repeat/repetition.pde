@@ -1,4 +1,6 @@
 //repetition piece GPS 
+//https://www.123rf.com/photo_100614472_empty-fuel-gauge-meter-vector-illustration.html
+//Navigation system response....
 PGraphics pg;
 
 void setup() {
