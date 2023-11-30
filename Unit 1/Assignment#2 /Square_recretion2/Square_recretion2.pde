@@ -30,8 +30,8 @@ void draw() {
   fill(#b4bcb1);
   square(square4.x, square4.y, 4 * ppi);
 
-  
-  if(frameCount == 1) {
+
+  if (frameCount == 1) {
     String filename = "output";
     save(filename + ".png");
     print("canvas saved as " + filename + ".png");

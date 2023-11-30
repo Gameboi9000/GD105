@@ -1,4 +1,5 @@
 //https://www.artsy.net/artwork/daniel-gottin-untitled-2-2001-abstract-painting
+//very abstract.... sidewalk -> screen..
 void setup() {
 
   size(500, 500);
@@ -9,7 +10,7 @@ void draw() {
 
   background(#fade5b);
   translate(width/4 , height/3);
-
+//outer rec
   strokeWeight(2);
   fill(#feb300);
   rect(-113, -123, 450, 228);
@@ -30,11 +31,11 @@ void draw() {
   rect(-122, 327, 495, 61);
   fill(#ffef3d);
   rect(-122, 183, 495, 46);
-  
+ //screen 
 for(float i = 1 ; i < 3; i++) {
 fill(244);
-square(i + 58 ,i + -37,i + 92);
-triangle(i + 84,40,87,5,85,323);
+//square(i + 58 ,i + -37,i + 92);
+triangle(i + 84,3,87,5,85,313);
 circle(3, 100,i + -8);
 }
 }

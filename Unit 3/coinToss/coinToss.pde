@@ -4,13 +4,13 @@ void setup() {
 
   size(500, 500);
 
-  frontSide = random(1) < 0.95; //first coin
-  frontSide = true;
+  frontSide = random(1) <= 0.50; //first coin
+  frontSide = false;
 
-  backSide = random(1) < 1; //2nd coin
+  backSide = random(1) <= 1; //2nd coin
   backSide = true;
 
-  side = random(1) < 1; //3rd 2^3 
+  side = random(1) <= 1; //3rd 2^3 
   side = false;
 
 
@@ -62,10 +62,10 @@ void draw() {
     line(4, 36, 240, 358);
   } else {
 
-    strokeWeight(11);
-    stroke(#eb1230);
-    line(471, 28, 240, 358);
-    line(4, 36, 240, 358);
+   strokeWeight(200);
+    line(15, 484, 14, -4);
+    line(17, 484, 1841, 482);
+    stroke(#740303);
   }
 
   if (frameCount == 1) {

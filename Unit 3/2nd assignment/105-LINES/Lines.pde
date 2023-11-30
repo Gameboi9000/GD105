@@ -1,37 +1,39 @@
 //exactly 105 lines
 
 void setup() {
-
+  background(0);
   size(500, 500);
-  fullScreen();
+  //fullScreen();
 }
 
 void draw() {
   smooth();
   //outer ring
-  background(14);
+  background(1);
   translate(width/2, height/2);
-  for (float y = 0; y <79; y+= 1) {
+  //78 lines running in this loop
+  for (float y = 0; y < 79; y+= 1) {
     rotate(1);
     strokeWeight(2);
     stroke(#44056c);
     rotate(cos(frameCount * .001) * .001);
-    line(width/2, 10, 336, 103);
+    line(width/130, 39, 353, 283);
     stroke(#48186a);
     strokeWeight(2);
-    line(width / 1, 44, 160, sin(308) + -157);
+    //line(width / 1, 44, 160, sin(308) + -157);
   }
 
-  //inner ring 
+  //inner ring 1 line 80
   translate(-3, 0);
-  circle(0, 0, 374);
+  circle(0, 0, 354);
   noFill();
-  for (float x = 0; x < 21; x+= 1) {
-    rotate(1);
-    strokeWeight(0.5);
+  //25 lines = 105 lines
+  for (float x = 0; x < 25; x+= 1) {
+    rotate(2);
+    strokeWeight(1.2);
     stroke(#b570c9);
     rotate(cos(frameCount * .001) * -0.4);
-    line(-84, -159, 24, cos(1) + -1);
+    line(-7, -170, -14, cos(1) + 82);
   }
   
   if(frameCount == 1) {
