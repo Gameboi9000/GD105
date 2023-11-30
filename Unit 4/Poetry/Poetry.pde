@@ -149,4 +149,10 @@ void draw() {
   //             Dancing in masks                         to placate death?     bb
   //            I don’t want it.                                 I don’t want art.  cc
   //           Take the gift back.                             With everything else.  dd
+
+if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }
 }
