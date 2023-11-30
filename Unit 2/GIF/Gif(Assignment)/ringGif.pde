@@ -1,7 +1,7 @@
 //make a ring that expands out and in 
 float progress = 0;
 float progressStep = 0.1;
-float progress1 = 0;
+
 
 void setup() {
   //size(500, 500);
@@ -50,7 +50,9 @@ void draw() {
   strokeWeight(3);
   noFill();
 
-  if(frameCount * progressStep * TAU <= TAU) {
-  saveFrame("frames/####.png");
+ if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
   }
 }

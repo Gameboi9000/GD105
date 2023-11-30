@@ -26,7 +26,7 @@ void draw() {
   fill(#ffd908);
 
   circle(sunPosition.x, sunPosition.y  * 50, sunSize + 51); //draw the sun on the canvas x,y, size
-  sunPosition.x += 0;
+ 
 
   rotate(TAU + 1.20 * speedOfRotation);  //moves all the circles to rotate
   //Mercury

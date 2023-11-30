@@ -36,9 +36,12 @@ void draw() {
 
   fill(#6b696c, 99);
   rect(75, 494, 484, 58);
-}
 
-void mouseClicked() {
-  save("output.png");
-  println(frameCount + ":saved as output.png");
+
+if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }
+ 
 }

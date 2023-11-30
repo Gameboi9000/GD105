@@ -11,7 +11,7 @@ void draw() {
   //outer ring
   background(14);
   translate(width/2, height/2);
-  for (float y = 0; y <=79; y+= 1) {
+  for (float y = 0; y <79; y+= 1) {
     rotate(1);
     strokeWeight(2);
     stroke(#44056c);
@@ -26,11 +26,17 @@ void draw() {
   translate(-3, 0);
   circle(0, 0, 374);
   noFill();
-  for (float x = 0; x <= 21; x+= 1) {
+  for (float x = 0; x < 21; x+= 1) {
     rotate(1);
     strokeWeight(0.5);
     stroke(#b570c9);
     rotate(cos(frameCount * .001) * -0.4);
     line(-84, -159, 24, cos(1) + -1);
+  }
+  
+  if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
   }
 }
