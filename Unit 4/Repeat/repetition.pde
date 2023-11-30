@@ -45,6 +45,10 @@ void draw() {
   scale(0.5);
   image(pg, 445, 451);
 
-  
+if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }  
   
 }
