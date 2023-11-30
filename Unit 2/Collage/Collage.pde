@@ -38,7 +38,7 @@ void draw() {
   rect(75, 494, 484, 58);
 
 
-if(frameCount == 1) {
+if(frameCount == 3) {
     String filename = "output";
     save(filename + ".png");
     print("canvas saved as " + filename + ".png");
