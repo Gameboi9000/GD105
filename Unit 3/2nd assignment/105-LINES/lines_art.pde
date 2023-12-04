@@ -36,7 +36,7 @@ void draw() {
     line(-7, -170, -14, cos(1) + 82);
   }
   
-  if(frameCount == 1) {
+  if(frameCount == 5) {
     String filename = "output";
     save(filename + ".png");
     print("canvas saved as " + filename + ".png");

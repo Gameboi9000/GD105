@@ -38,4 +38,11 @@ fill(244);
 triangle(i + 84,3,87,5,85,313);
 circle(3, 100,i + -8);
 }
+
+if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }
+
 }
