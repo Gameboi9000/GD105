@@ -12,7 +12,6 @@ void setup() {
 void draw() {
   background(0);
   progress = sin(frameCount * .007) * width/ 2; // moves the circle to half of the width
-
 //circles positioned within each other 
   translate(width /2 -253, height /2  - 252);
   noFill();
