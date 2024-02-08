@@ -11,7 +11,7 @@ void draw() {
   //outer ring
   background(1);
   translate(width/2, height/2);
-  //78 lines running in this loop
+  //79 lines running in this loop
   for (float y = 0; y < 79; y+= 1) {
     rotate(1);
     strokeWeight(2);

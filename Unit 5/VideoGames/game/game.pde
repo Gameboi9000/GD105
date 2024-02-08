@@ -51,8 +51,14 @@ void drawCharacter() {
 void drawObstacle() {
   stroke(#05d3ff);
   strokeWeight(3);
-  rect(obstacleX + 145 , obstacleY + -2, obstacleSize + 14, obstacleSize + 158);
-  rect(obstacleX + 148 , obstacleY + 243, obstacleSize + 10, obstacleSize + 332);
+  
+  for(int i = 1; i <= 10; i++){
+  rect(i * 27, i * 0, i * 1, height/2) ; //top pipes
+  rect(i * 44, i * 25, i * -1, height/2) ; //bottom pipes
+  //rect(i * 13, i * -1, i * 2, height/2) ;
+  //rect x, y, width, height)
+  }
+  //rect(obstacleX + 34 , obstacleY + 243, obstacleSize + 10, obstacleSize + 332);
 }
 
 //void moveObstacle() {
